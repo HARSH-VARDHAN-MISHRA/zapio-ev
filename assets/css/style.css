@@ -1,0 +1,432 @@
+/* === Google Fonts Import === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* === Root Variables === */
+:root {
+    /* Fonts */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* Brand Colors */
+    --color-green: #87c060;   
+    --color-yellow: #FFD700;                    
+    --color-grey: #4B4B4B;                      
+    --color-black: #111111;                     
+    --color-white: #ffffff;                     
+
+
+    --color-primary-bg: #182c24;                
+    --color-secondary-bg: #144833;              
+    --color-accent-dark: #063b27;               
+    --color-accent: #063b27;       
+
+
+    
+
+    --color-accent-light: #cfff92; 
+
+
+    --color-style-guide-bg: #F8FAFC;            
+    --color-widget-bg: #fafafa;                 
+    --color-heading-bg: #fbfbfb;                
+    --color-title-bg: #eeeeee;                  
+    --color-search-border: #e7e7e7;             
+    --color-hover-bg: #e6e6e6;                  
+    --color-gallery-block: #000;                
+    --color-shadow: 0px 0px 4px 0 #00000057;    
+
+
+
+     --color-green: #87c060;
+    --color-yellow: #FFD700;
+
+}
+
+
+
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-poppins);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === Buttons === */
+.btn-primary {
+  background: var(--color-green);
+  color: var(--color-white);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+
+
+
+
+
+
+
+/* === Header === */
+.main-header {
+  width: 100%;
+  padding: 15px 0;
+  /* background: var(--color-primary-bg); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: var(--color-shadow);
+}
+
+.main-header .logo img {
+  height: 45px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: var(--color-yellow);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--color-primary-bg);
+    width: 220px;
+    padding: 20px;
+    box-shadow: var(--color-shadow);
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-menu.active {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* === Hero Section === */
+.hero-section {
+    height: 100vh;
+    /* Changed background to Deep Black with a subtle dark gradient for depth */
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-green) 100%); 
+    display: flex;
+    align-items: center;
+    padding: 100px 0; /* Increased padding to account for fixed header */
+    position: relative;
+    overflow: hidden; /* To contain potential floating elements */
+}
+
+/* New element for context/pre-title */
+.hero-pre-title {
+    font-family: var(--font-roboto);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--color-green); /* Use Electric Green for a confident, tech-savvy feel */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-family: var(--font-poppins);
+    font-size: 3.8rem; /* Increased size for impact */
+    font-weight: 800; /* Made even bolder (assuming Poppins Bold/ExtraBold) */
+    text-transform: uppercase;
+    color: var(--color-white);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero-tagline {
+    font-size: 1.25rem; /* Increased size for emphasis */
+    font-weight: 600; 
+    /* Use Energetic Yellow for excitement and a youthful, vibrant tone [cite: 12, 29] */
+    color: var(--color-yellow); 
+    margin: 15px 0 35px; /* Increased margin for separation */
+    letter-spacing: 2px;
+}
+
+.hero-info {
+    font-family: var(--font-roboto);
+    font-size: 1.05rem; /* Slightly larger text for readability */
+    color: #cccccc; /* Softer white for body text */
+    line-height: 1.8;
+    max-width: 95%; /* Increased max-width */
+}
+
+/* Use Energetic Yellow for the main content highlight (CTA/Excitement)  */
+.hero-info .highlight {
+    color: var(--color-yellow); 
+    font-weight: 600;
+}
+
+
+/* --- Button Refinements --- */
+/* (Adjusted from previous suggestions to ensure they are present) */
+.btn-primary:hover {
+    background: var(--color-yellow);
+    color: var(--color-black); /* Yellow on Black is high contrast */
+}
+
+.btn-outline {
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+    /* ... other styles ... */
+}
+
+.btn-outline:hover {
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+/* --- Hero Image Refinements --- */
+.hero-img img {
+    max-height: 520px; /* Slightly larger image */
+    width: 100%; /* Auto width to maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 20px; /* Slightly less aggressive corner radius for a "smart" feel */
+    box-shadow: 0 15px 40px rgba(135, 192, 96, 0.4); /* Green shadow for eco-forward look */
+    animation: float 4s ease-in-out infinite;
+    /* Add a subtle 3D tilt effect for a dynamic, youthful feel */
+    transform: perspective(1000px) rotateY(-5deg) scale(1);
+    transition: all 0.5s ease;
+
+    
+}
+
+.hero-img img:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.03);
+}
+
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+        height: auto;
+        padding: 5rem 0;
+        padding-top: 8rem;
+    }
+
+    .hero-info {
+        margin: 0 auto 25px;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+
+
+    .hero-img img {
+        margin-top: 4rem;
+    }
+
+    .hero-buttons a {
+        width: 80%;
+        margin-right: 0rem !important;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============= Icons ==============  */
+
+.social-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  z-index: 100;
+  transform: all 0.5s ease;
+  line-height: 46px;
+}
+
+.social-float::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.whatsapp-float {
+  background-color: #25d366;
+  bottom: 140px;
+}
+
+.whatsapp-float::before {
+  background-color: #25d366;
+}
+
+.instagram-float {
+  background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  bottom: 200px;
+}
+
+.instagram-float::before {
+  background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.youtube-float {
+  background-color: #ff0000;
+  bottom: 320px;
+}
+
+.youtube-float::before {
+  background-color: #ff0000;
+}
+
+.social-icon {
+  margin-top: 12px;
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse-border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-float {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 38px;
+    right: 10px;
+  }
+
+  .social-icon {
+    line-height: 0.8 !important;
+  }
+
+  .whatsapp-float {
+    bottom: 100px;
+  }
+
+  .instagram-float {
+    bottom: 150px;
+  }
+}
+
