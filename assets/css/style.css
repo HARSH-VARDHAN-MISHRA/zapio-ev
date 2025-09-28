@@ -331,6 +331,569 @@ body {
 
 
 
+/* === General Section Styles (Titles) === */
+.products-section {
+    background: var(--color-secondary-bg); 
+    color: var(--color-white);
+    padding-bottom: 5rem;
+}
+
+.section-pre-title {
+    font-family: var(--font-roboto);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--color-yellow); /* Energetic Yellow for excitement */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: var(--font-poppins);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-family: var(--font-roboto);
+    font-size: 1.05rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* === Product Card Styles (Clean, Minimalist Design [cite: 43]) === */
+.product-card {
+    background: var(--color-black); 
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(135, 192, 96, 0.1); /* Subtle green border */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(135, 192, 96, 0.2); /* Eco-forward hover effect */
+}
+
+.product-img-container {
+    padding: 20px;
+    /* Clean, minimalist image background */
+}
+
+.product-img {
+    max-height: 400px;
+    object-fit: contain;
+    width: 100%;
+    filter: drop-shadow(0 0 15px rgba(135, 192, 96, 0.3));
+}
+
+.product-status {
+    display: inline-block;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.product-name {
+    font-family: var(--font-poppins);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.product-description {
+    font-family: var(--font-roboto);
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* === Key Features Grid (Smart & Reliable) === */
+.key-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    background: #181818;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feature-box .feature-icon {
+    color: var(--color-yellow); /* Yellow for excitement/attention */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    min-width: 24px;
+}
+
+.feature-box .feature-text {
+    margin: 0;
+    font-family: var(--font-roboto);
+    font-size: 0.95rem;
+    line-height: 1.3;
+    color: #e0e0e0;
+}
+
+.feature-box .feature-text strong {
+    font-weight: 600;
+}
+
+/* Responsive Adjustments for Products */
+@media (max-width: 768px) {
+    .product-details {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .product-img-container {
+        text-align: center;
+    }
+    .key-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === Dealership Section === */
+.dealership-section {
+    background: var(--color-style-guide-bg); /* Use a soft light background (or white) for contrast */
+    color: var(--color-black);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.dealership-section .section-pre-title {
+    color: var(--color-green); /* Electric Green for confidence and growth */
+}
+
+.dealership-section .section-title {
+    color: var(--color-black);
+}
+
+.dealership-section .section-subtitle {
+    color: var(--color-grey);
+}
+
+/* === Benefit Cards === */
+.benefit-card {
+    background: var(--color-white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: 100%; /* Ensures cards in a row are the same height */
+    transition: all 0.3s ease;
+    border-bottom: 5px solid var(--color-white); /* Space for hover effect */
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--color-yellow); /* Energetic Yellow highlight on hover */
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: var(--color-green); /* Primary brand color */
+    margin-bottom: 15px;
+    /* Subtle green text-shadow for an electric feel */
+    text-shadow: 0 0 8px rgba(135, 192, 96, 0.4);
+}
+
+.benefit-title {
+    font-family: var(--font-poppins);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+.benefit-description {
+    font-family: var(--font-roboto);
+    color: var(--color-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* === Large CTA Button (for Dealership Application) === */
+.btn-cta-large {
+    font-size: 1.1rem;
+    padding: 15px 40px;
+}
+
+.btn-cta-large:hover {
+    /* Uses the existing btn-primary hover styles (Yellow background, Black text) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === About Us Section === */
+.about-section {
+    background: var(--color-secondary-bg); 
+    color: var(--color-white);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about-section .section-pre-title {
+    color: var(--color-yellow);
+}
+
+.about-section .section-title {
+    color: var(--color-white);
+    max-width: 90%;
+}
+
+.about-lead {
+  font-family: var(--font-roboto);
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.about-lead strong {
+  color: var(--color-yellow);
+  font-weight: 500;
+}
+
+/* --- Vision/Mission Card Styles (NEW DESIGN) --- */
+.vision-mission-card {
+    height: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-top: 5px solid; /* Placeholder for color accent */
+}
+
+/* Vision Card: Use Electric Green accent */
+.mission-card-vision {
+    /* background: var(--color-black); */
+    border-color: var(--color-green);
+}
+.mission-card-vision:hover {
+    box-shadow: 0 8px 25px rgba(135, 192, 96, 0.4);
+}
+
+/* Mission Card: Use Energetic Yellow accent */
+.mission-card-mission {
+    /* background: var(--color-black); */
+    border-color: var(--color-yellow);
+}
+.mission-card-mission:hover {
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.vision-title,
+.mission-title {
+    font-family: var(--font-poppins);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.vision-title {
+    color: var(--color-green);
+}
+.mission-title {
+    color: var(--color-yellow);
+}
+
+
+.vision-mission-card i {
+    font-size: 1.5rem;
+}
+
+.vision-text,
+.mission-text {
+    font-family: var(--font-roboto);
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+}
+.vision-text strong,
+.mission-text strong {
+    font-weight: 700; /* Ensure strong is bold */
+}
+
+/* --- Image Styling --- */
+.about-img {
+  width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .about-img-container {
+        text-align: center;
+    }
+    .about-img {
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Contact Section Styles (V3 - Cleaner, Lighter) === */
+.contact-section {
+    background: var(--color-style-guide-bg); /* Soft light background */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact-title { color: var(--color-black); }
+.contact-subtitle { color: var(--color-grey); }
+
+/* --- Contact Info Card (V3 - Cleaner Dark Card) --- */
+.contact-info-card-v3 {
+    background: var(--color-secondary-bg); 
+    color: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-title-v3 {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--color-green); 
+}
+
+.info-group-v3 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-group-v3 i {
+    color: var(--color-yellow);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 4px;
+    min-width: 20px;
+}
+
+.info-data-v3 {
+    margin: 0;
+    line-height: 1.6;
+    font-family: var(--font-roboto);
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.info-data-v3 a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-data-v3 a:hover {
+    color: var(--color-yellow);
+}
+
+/* --- Contact Form Card (V3) --- */
+.contact-form-card-v3 {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+/* --- Form Elements (Reusing existing form-control styles) --- */
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+
+
+
+
+.contact-section button{
+  border: none;
+}
+
+
+/* === Footer Styles (V3 - Classic Multi-Column) === */
+.main-footer-v3 {
+    /* background: var(--color-black);  */
+    background: var(--color-accent-dark); 
+    color: #cccccc;
+    font-family: var(--font-roboto);
+}
+
+.footer-logo-v3 img {
+    height: 35px;
+}
+
+.footer-text-v3 {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.footer-heading-v3 {
+    font-family: var(--font-poppins);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.footer-links-v3 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-v3 li {
+    margin-bottom: 10px;
+}
+
+.footer-links-v3 a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links-v3 a:hover {
+    color: var(--color-yellow);
+}
+
+/* Footer Social Icons */
+.social-icon-footer-v3 {
+    color: var(--color-green);
+    /* font-size: 1.3rem; */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    text-align: center;
+    transition: color 0.3s, transform 0.3s;
+    background: rgba(255, 255, 255, 0.05);
+    display: inline-block;
+}
+
+
+.social-icon-footer-v3:hover {
+    color: var(--color-yellow);
+    transform: translateY(-2px);
+}
+
+.footer-divider-v3 {
+    border-top: 1px solid var(--color-grey);
+    opacity: 0.2;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-copyright-v3 {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ============= Icons ==============  */
