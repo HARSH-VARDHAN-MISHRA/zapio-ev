@@ -41,32 +41,55 @@
 
 
     <!-- Header / Navbar -->
-    <header class="main-header">
+    <header id="header" class="main-header">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="./assets/images/zapio-logo-black.png" alt="Zapio EV">
+            <a href="./index.html" class="logo">
+                <img src="./assets/images/logo.png" alt="Zapio EV">
             </a>
 
-            <!-- Navigation -->
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#dealership">Dealership</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav id="mainNav" class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+
+                    <!-- <li class="nav-item has-dropdown">
+                        <a class="nav-link dropdown-toggle" href="./products.html">
+                            Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a class="sub-menu-item" href="./products.html#model-x">Zapio Model X</a></li>
+                            <li><a class="sub-menu-item" href="./products.html#model-y">Zapio Model Y</a></li>
+                            <li>
+                                <div class="dropdown-divider-custom"></div>
+                            </li>
+                            <li><a class="sub-menu-item" href="./products.html">View All Models</a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a href="#models" class="nav-link">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#dealership" class="nav-link">Dealership</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
                 </ul>
             </nav>
 
-            <!-- CTA Button -->
-            <a href="#consult" class="btn-primary">Get Consultation</a>
+            <a href="#dealership" class="btn-header desktop-cta">Dealership</a>
 
-            <!-- Mobile Menu Icon -->
-            <div class="menu-toggle d-lg-none">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+            <button id="menuToggler" class="menu-toggler d-lg-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars menu-toggle-icon"></i>
+            </button>
         </div>
     </header>
 
@@ -121,7 +144,7 @@
                         <div class="row align-items-center">
 
                             <div class="col-md-6 product-img-container">
-                                <img src="./assets/images/vehicles/image-20.JPG" alt="Zapio Model X Electric Scooter"
+                                <img src="./assets/images/vehicles/double-light-1.PNG" alt="Zapio Model X Electric Scooter"
                                     class="img-fluid product-img">
                             </div>
 

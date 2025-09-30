@@ -107,75 +107,262 @@ body {
 
 
 
-/* === Header === */
+/* ========================================= */
+/* === HEADER V5 - CUSTOM & ORGANIZED CSS === */
+/* ========================================= */
+
+/* 1. GLOBAL HEADER STYLING (POSITIONING, TRANSITIONS, LOGO) */
 .main-header {
-  width: 100%;
-  padding: 15px 0;
-  /* background: var(--color-primary-bg); */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: var(--color-shadow);
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Transparent initially for hero section */
+    background: rgba(0, 0, 0, 0.4); 
+    box-shadow: none;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Sticky/Scrolled State */
+.main-header.scrolled {
+    background: var(--color-black); 
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-header .logo img {
-  height: 45px;
+    height: 40px; 
 }
 
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+
+/* 2. DESKTOP NAVIGATION (Main Menu Links) */
+.main-nav {
+    flex-grow: 1; /* Allows nav to take center space */
+    display: flex;
+    justify-content: center;
 }
 
-.nav-menu ul li a {
-  font-family: var(--font-poppins);
-  color: var(--color-white);
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.main-nav .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    margin: 0;
+    padding: 0;
 }
 
-.nav-menu ul li a:hover,
-.nav-menu ul li a.active {
-  color: var(--color-yellow);
+.main-nav .nav-item {
+    position: relative; /* Needed for dropdown */
 }
 
-/* Mobile Menu */
-.menu-toggle {
-  display: none;
-  color: var(--color-white);
-  font-size: 1.5rem;
-  cursor: pointer;
+.main-nav .nav-link {
+    font-family: var(--font-poppins);
+    color: var(--color-white);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-  .nav-menu {
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+    color: var(--color-yellow);
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+.main-nav .dropdown-toggle::after {
     display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: var(--color-primary-bg);
-    width: 220px;
-    padding: 20px;
-    box-shadow: var(--color-shadow);
-  }
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .nav-menu.active {
-    display: block;
-  }
-  .menu-toggle {
-    display: block;
-  }
 }
+
+/* Products Dropdown Arrow */
+.dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+/* 3. DESKTOP DROPDOWN/SUB-MENU STYLING (CSS Hover Logic) */
+.sub-menu {
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    z-index: 1001;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 200px;
+    background: var(--color-secondary-bg); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    
+    /* Default Hidden State (for desktop) */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Prevents clicks on link space when hidden */
+}
+
+/* DESKTOP: Hover to show sub-menu */
+.nav-item.has-dropdown:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto; /* Allows interaction when visible */
+}
+
+.sub-menu-item {
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-menu-item:hover {
+    background-color: var(--color-green); 
+    color: var(--color-black);
+}
+
+.dropdown-divider-custom {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+
+/* 4. CTA BUTTON */
+.btn-header {
+    background: none;
+    border: 2px solid var(--color-green);
+    color: var(--color-white);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0; 
+}
+
+.btn-header:hover {
+    background: var(--color-green);
+    color: var(--color-black);
+}
+
+/* 5. MOBILE MENU TOGGLER */
+.menu-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.menu-toggle-icon {
+    color: var(--color-yellow); 
+}
+
+/* 6. MEDIA QUERY (MOBILE SPECIFIC OVERRIDES) */
+@media (max-width: 991px) {
+    /* Main Navigation Override */
+    .main-nav {
+        display: none; /* Collapsed by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-black); 
+        padding: 15px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+    
+    .main-nav.active {
+        display: block; /* Toggled by JS */
+    }
+    
+    .main-nav .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        gap: 0;
+    }
+    
+    .main-nav .nav-item {
+        width: 100%;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .main-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav .nav-link {
+        padding: 15px 0; /* Larger tap area */
+        border-bottom: none; 
+        display: block;
+    }
+
+    /* Mobile Dropdown Sub-menu Override (JS Click Logic) */
+    .nav-item.has-dropdown .sub-menu {
+        /* Overrides desktop positioning/visibility */
+        position: static; 
+        right: 0;
+
+        width: 100%;
+        transform: none;
+        visibility: visible; 
+        opacity: 1;
+        max-height: 0; /* Hides the menu visually for JS toggle */
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background: var(--color-secondary-bg);
+        border: none;
+        box-shadow: none;
+        transition: max-height 0.4s ease-in-out;
+        pointer-events: auto; /* Always allow interaction on mobile */
+    }
+    .nav-item.has-dropdown:hover .sub-menu {
+        /* margin: 0.5rem 0rem; */
+        transform: translateX(0%) translateY(0) !important;
+    }
+
+    /* Active State (Toggled by JS click) */
+    .nav-item.has-dropdown.active .sub-menu {
+        max-height: 200px; 
+        padding: 10px 0;
+    }
+    
+    /* Rotate the arrow on click */
+    .nav-item.has-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .sub-menu-item {
+        padding-left: 30px; 
+    }
+    
+    /* CTA button on Mobile */
+    .btn-header {
+        padding: 6px 15px; 
+    }
+}
+
+
+
+
+
 
 
 
