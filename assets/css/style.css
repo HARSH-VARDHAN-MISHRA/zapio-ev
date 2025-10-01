@@ -509,22 +509,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-/* === General Section Styles (Titles) === */
-.products-section {
-    background: var(--color-secondary-bg); 
-    color: var(--color-white);
-    padding-bottom: 5rem;
-}
-
 .section-pre-title {
     font-family: var(--font-roboto);
     font-size: 0.9rem;
@@ -551,106 +535,161 @@ body {
     margin: 0 auto;
 }
 
-/* === Product Card Styles (Clean, Minimalist Design [cite: 43]) === */
-.product-card {
-    background: var(--color-black); 
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    padding: 30px;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(135, 192, 96, 0.1); /* Subtle green border */
+
+
+
+
+
+
+
+/* ========================================= */
+/* === MODELS OVERVIEW SECTION STYLES (BRIGHT THEME) === */
+/* ========================================= */
+
+.models-overview-section {
+    /* Keep the overall section background dark for contrast with the cards */
+    background: var(--color-secondary-bg); 
+    color: var(--color-white);
+    padding-bottom: 5rem;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(135, 192, 96, 0.2); /* Eco-forward hover effect */
+/* Section Titles - remain visible on the dark background */
+.models-overview-section .section-pre-title {
+    color: var(--color-yellow); 
 }
 
-.product-img-container {
-    padding: 20px;
-    /* Clean, minimalist image background */
-}
-
-.product-img {
-    max-height: 400px;
-    object-fit: contain;
-    width: 100%;
-    filter: drop-shadow(0 0 15px rgba(135, 192, 96, 0.3));
-}
-
-.product-status {
-    display: inline-block;
-    background: var(--color-yellow);
-    color: var(--color-black);
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.product-name {
-    font-family: var(--font-poppins);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-green);
-}
-
-.product-description {
-    font-family: var(--font-roboto);
-    color: #cccccc;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-/* === Key Features Grid (Smart & Reliable) === */
-.key-features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.feature-box {
+/* --- Model Card Styling --- */
+.model-card {
+    background: var(--color-white); /* SWITCHED TO WHITE for a clean, sharp look */
+    /* border-radius: 15px; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on light card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* border: 3px solid var(--color-green);  */
+    overflow: hidden;
+    height: 100%;
     display: flex;
-    align-items: center;
-    background: #181818;
-    padding: 15px;
-    border-radius: 8px;
+    flex-direction: column;
 }
 
-.feature-box .feature-icon {
-    color: var(--color-yellow); /* Yellow for excitement/attention */
-    font-size: 1.5rem;
-    margin-right: 15px;
-    min-width: 24px;
+.model-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(135, 192, 96, 0.5); /* Stronger Green glow on hover */
 }
 
-.feature-box .feature-text {
-    margin: 0;
-    font-family: var(--font-roboto);
-    font-size: 0.95rem;
-    line-height: 1.3;
-    color: #e0e0e0;
+/* --- Image Carousel/Slider Styling --- */
+.model-carousel {
+    /* background: var(--color-black);  */
+    padding: 15px 15px 10px; 
+    border-bottom: 3px solid var(--color-yellow); 
 }
 
-.feature-box .feature-text strong {
+.model-img {
+    max-height: 300px; 
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5)); /* White glow on black BG */
+}
+
+/* Carousel controls for visibility on black background */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1); /* White/Light controls */
+    opacity: 0.8;
+}
+
+/* --- Text Details --- */
+.model-details {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-black); /* Ensure text is readable on white BG */
+}
+
+.model-name {
+    font-family: var(--font-poppins);
+    font-size: 1.3rem;
     font-weight: 600;
+    color: var(--color-green); 
+    text-transform: uppercase;
+    /* margin-bottom: 5px; */
 }
 
-/* Responsive Adjustments for Products */
-@media (max-width: 768px) {
-    .product-details {
-        text-align: center;
-        margin-top: 30px;
+.model-tagline {
+    display: none;
+    font-family: var(--font-roboto);
+    font-size: 1rem;
+    color: var(--color-black); /* Dark text on white background */
+    margin-bottom: 25px;
+    flex-grow: 1; 
+}
+
+/* --- WhatsApp Button (Themed) --- */
+.btn-whatsapp {
+    /* Style remains the same: Energetic Yellow CTA, which pops on the white card */
+    display: inline-flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-yellow); 
+    color: var(--color-black);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-poppins);
+    font-weight: 700; 
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-yellow);
+}
+
+.btn-whatsapp:hover {
+    background: var(--color-green); 
+    border-color: var(--color-green);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(135, 192, 96, 0.4);
+}
+
+.btn-whatsapp .fab {
+    font-size: 1.4rem;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .model-name {
+        font-size: 1.6rem;
     }
-    .product-img-container {
-        text-align: center;
+    .model-tagline {
+        font-size: 0.95rem;
     }
-    .key-features-grid {
-        grid-template-columns: 1fr;
+    .btn-whatsapp {
+        font-size: 0.9rem;
+    }
+    .model-img {
+        max-height: 200px; 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
