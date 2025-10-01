@@ -8,36 +8,36 @@
     --font-roboto: 'Roboto', sans-serif;
 
     /* Brand Colors */
-    --color-green: #87c060;   
-    --color-yellow: #FFD700;                    
-    --color-grey: #4B4B4B;                      
-    --color-black: #111111;                     
-    --color-white: #ffffff;                     
+    --color-green: #87c060;
+    --color-yellow: #FFD700;
+    --color-grey: #4B4B4B;
+    --color-black: #111111;
+    --color-white: #ffffff;
 
 
-    --color-primary-bg: #182c24;                
-    --color-secondary-bg: #144833;              
-    --color-accent-dark: #063b27;               
-    --color-accent: #063b27;       
-
-
-    
-
-    --color-accent-light: #cfff92; 
-
-
-    --color-style-guide-bg: #F8FAFC;            
-    --color-widget-bg: #fafafa;                 
-    --color-heading-bg: #fbfbfb;                
-    --color-title-bg: #eeeeee;                  
-    --color-search-border: #e7e7e7;             
-    --color-hover-bg: #e6e6e6;                  
-    --color-gallery-block: #000;                
-    --color-shadow: 0px 0px 4px 0 #00000057;    
+    --color-primary-bg: #182c24;
+    --color-secondary-bg: #144833;
+    --color-accent-dark: #063b27;
+    --color-accent: #063b27;
 
 
 
-     --color-green: #87c060;
+
+    --color-accent-light: #cfff92;
+
+
+    --color-style-guide-bg: #F8FAFC;
+    --color-widget-bg: #fafafa;
+    --color-heading-bg: #fbfbfb;
+    --color-title-bg: #eeeeee;
+    --color-search-border: #e7e7e7;
+    --color-hover-bg: #e6e6e6;
+    --color-gallery-block: #000;
+    --color-shadow: 0px 0px 4px 0 #00000057;
+
+
+
+    --color-green: #87c060;
     --color-yellow: #FFD700;
 
 }
@@ -46,15 +46,15 @@
 
 /* === Global Styles === */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  font-family: var(--font-poppins);
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-poppins);
 }
 
 
@@ -76,7 +76,7 @@ body {
     opacity: .2;
     position: absolute;
     transform: rotate(10deg);
-    transition: all .55s cubic-bezier(.19,1,.22,1);
+    transition: all .55s cubic-bezier(.19, 1, .22, 1);
     width: 32px;
     animation: btnmoveslide 2s infinite
 }
@@ -95,35 +95,35 @@ body {
 
 /* === Buttons === */
 .btn-primary {
-  background: var(--color-green);
-  color: var(--color-white);
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background: var(--color-yellow);
-  color: var(--color-black);
+    background: var(--color-yellow);
+    color: var(--color-black);
 }
 
 .btn-outline {
-  border: 2px solid var(--color-green);
-  color: var(--color-green);
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  background: var(--color-green);
-  color: var(--color-white);
+    background: var(--color-green);
+    color: var(--color-white);
 }
 
 
@@ -146,26 +146,27 @@ body {
     left: 0;
     z-index: 1000;
     /* Transparent initially for hero section */
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(0, 0, 0, 0.4);
     box-shadow: none;
     transition: all 0.4s ease-in-out;
 }
 
 /* Sticky/Scrolled State */
 .main-header.scrolled {
-    background: var(--color-black); 
+    background: var(--color-black);
     padding: 15px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-header .logo img {
-    height: 40px; 
+    height: 40px;
 }
 
 
 /* 2. DESKTOP NAVIGATION (Main Menu Links) */
 .main-nav {
-    flex-grow: 1; /* Allows nav to take center space */
+    flex-grow: 1;
+    /* Allows nav to take center space */
     display: flex;
     justify-content: center;
 }
@@ -174,13 +175,14 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 40px; 
+    gap: 40px;
     margin: 0;
     padding: 0;
 }
 
 .main-nav .nav-item {
-    position: relative; /* Needed for dropdown */
+    position: relative;
+    /* Needed for dropdown */
 }
 
 .main-nav .nav-link {
@@ -216,7 +218,7 @@ body {
 /* 3. DESKTOP DROPDOWN/SUB-MENU STYLING (CSS Hover Logic) */
 .sub-menu {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     z-index: 1001;
@@ -224,16 +226,17 @@ body {
     padding: 10px 0;
     margin: 0;
     min-width: 200px;
-    background: var(--color-secondary-bg); 
+    background: var(--color-secondary-bg);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-    
+
     /* Default Hidden State (for desktop) */
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
-    pointer-events: none; /* Prevents clicks on link space when hidden */
+    pointer-events: none;
+    /* Prevents clicks on link space when hidden */
 }
 
 /* DESKTOP: Hover to show sub-menu */
@@ -241,7 +244,8 @@ body {
     visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
-    pointer-events: auto; /* Allows interaction when visible */
+    pointer-events: auto;
+    /* Allows interaction when visible */
 }
 
 .sub-menu-item {
@@ -254,7 +258,7 @@ body {
 }
 
 .sub-menu-item:hover {
-    background-color: var(--color-green); 
+    background-color: var(--color-green);
     color: var(--color-black);
 }
 
@@ -276,7 +280,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .btn-header:hover {
@@ -295,61 +299,67 @@ body {
 }
 
 .menu-toggle-icon {
-    color: var(--color-yellow); 
+    color: var(--color-yellow);
 }
 
 /* 6. MEDIA QUERY (MOBILE SPECIFIC OVERRIDES) */
 @media (max-width: 991px) {
+
     /* Main Navigation Override */
     .main-nav {
-        display: none; /* Collapsed by default */
+        display: none;
+        /* Collapsed by default */
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--color-black); 
+        background: var(--color-black);
         padding: 15px 0;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
     }
-    
+
     .main-nav.active {
-        display: block; /* Toggled by JS */
+        display: block;
+        /* Toggled by JS */
     }
-    
+
     .main-nav .nav-list {
         flex-direction: column;
         align-items: flex-start;
         padding: 0 20px;
         gap: 0;
     }
-    
+
     .main-nav .nav-item {
         width: 100%;
         margin-bottom: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
+
     .main-nav .nav-item:last-child {
         border-bottom: none;
     }
 
     .main-nav .nav-link {
-        padding: 15px 0; /* Larger tap area */
-        border-bottom: none; 
+        padding: 15px 0;
+        /* Larger tap area */
+        border-bottom: none;
         display: block;
     }
 
     /* Mobile Dropdown Sub-menu Override (JS Click Logic) */
     .nav-item.has-dropdown .sub-menu {
         /* Overrides desktop positioning/visibility */
-        position: static; 
+        position: static;
         right: 0;
 
         width: 100%;
         transform: none;
-        visibility: visible; 
+        visibility: visible;
         opacity: 1;
-        max-height: 0; /* Hides the menu visually for JS toggle */
+        max-height: 0;
+        /* Hides the menu visually for JS toggle */
         overflow: hidden;
         margin: 0;
         padding: 0;
@@ -357,8 +367,10 @@ body {
         border: none;
         box-shadow: none;
         transition: max-height 0.4s ease-in-out;
-        pointer-events: auto; /* Always allow interaction on mobile */
+        pointer-events: auto;
+        /* Always allow interaction on mobile */
     }
+
     .nav-item.has-dropdown:hover .sub-menu {
         /* margin: 0.5rem 0rem; */
         transform: translateX(0%) translateY(0) !important;
@@ -366,22 +378,22 @@ body {
 
     /* Active State (Toggled by JS click) */
     .nav-item.has-dropdown.active .sub-menu {
-        max-height: 200px; 
+        max-height: 200px;
         padding: 10px 0;
     }
-    
+
     /* Rotate the arrow on click */
     .nav-item.has-dropdown.active .dropdown-arrow {
         transform: rotate(180deg);
     }
 
     .sub-menu-item {
-        padding-left: 30px; 
+        padding-left: 30px;
     }
-    
+
     /* CTA button on Mobile */
     .btn-header {
-        padding: 6px 15px; 
+        padding: 6px 15px;
     }
 }
 
@@ -402,12 +414,14 @@ body {
 .hero-section {
     height: 100vh;
     /* Changed background to Deep Black with a subtle dark gradient for depth */
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-green) 100%); 
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-green) 100%);
     display: flex;
     align-items: center;
-    padding: 100px 0; /* Increased padding to account for fixed header */
+    padding: 100px 0;
+    /* Increased padding to account for fixed header */
     position: relative;
-    overflow: hidden; /* To contain potential floating elements */
+    overflow: hidden;
+    /* To contain potential floating elements */
 }
 
 /* New element for context/pre-title */
@@ -416,15 +430,18 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 3px;
-    color: var(--color-green); /* Use Electric Green for a confident, tech-savvy feel */
+    color: var(--color-green);
+    /* Use Electric Green for a confident, tech-savvy feel */
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
 .hero-title {
     font-family: var(--font-poppins);
-    font-size: 3.8rem; /* Increased size for impact */
-    font-weight: 800; /* Made even bolder (assuming Poppins Bold/ExtraBold) */
+    font-size: 3.8rem;
+    /* Increased size for impact */
+    font-weight: 800;
+    /* Made even bolder (assuming Poppins Bold/ExtraBold) */
     text-transform: uppercase;
     color: var(--color-white);
     line-height: 1.1;
@@ -432,25 +449,30 @@ body {
 }
 
 .hero-tagline {
-    font-size: 1.25rem; /* Increased size for emphasis */
-    font-weight: 600; 
+    font-size: 1.25rem;
+    /* Increased size for emphasis */
+    font-weight: 600;
     /* Use Energetic Yellow for excitement and a youthful, vibrant tone [cite: 12, 29] */
-    color: var(--color-yellow); 
-    margin: 15px 0 35px; /* Increased margin for separation */
+    color: var(--color-yellow);
+    margin: 15px 0 35px;
+    /* Increased margin for separation */
     letter-spacing: 2px;
 }
 
 .hero-info {
     font-family: var(--font-roboto);
-    font-size: 1.05rem; /* Slightly larger text for readability */
-    color: #cccccc; /* Softer white for body text */
+    font-size: 1.05rem;
+    /* Slightly larger text for readability */
+    color: #cccccc;
+    /* Softer white for body text */
     line-height: 1.8;
-    max-width: 95%; /* Increased max-width */
+    max-width: 95%;
+    /* Increased max-width */
 }
 
 /* Use Energetic Yellow for the main content highlight (CTA/Excitement)  */
 .hero-info .highlight {
-    color: var(--color-yellow); 
+    color: var(--color-yellow);
     font-weight: 600;
 }
 
@@ -459,7 +481,8 @@ body {
 /* (Adjusted from previous suggestions to ensure they are present) */
 .btn-primary:hover {
     background: var(--color-yellow);
-    color: var(--color-black); /* Yellow on Black is high contrast */
+    color: var(--color-black);
+    /* Yellow on Black is high contrast */
 }
 
 .btn-outline {
@@ -475,17 +498,21 @@ body {
 
 /* --- Hero Image Refinements --- */
 .hero-img img {
-    max-height: 520px; /* Slightly larger image */
-    width: 100%; /* Auto width to maintain aspect ratio */
+    max-height: 520px;
+    /* Slightly larger image */
+    width: 100%;
+    /* Auto width to maintain aspect ratio */
     object-fit: cover;
-    border-radius: 20px; /* Slightly less aggressive corner radius for a "smart" feel */
-    box-shadow: 0 15px 40px rgba(135, 192, 96, 0.4); /* Green shadow for eco-forward look */
+    border-radius: 20px;
+    /* Slightly less aggressive corner radius for a "smart" feel */
+    box-shadow: 0 15px 40px rgba(135, 192, 96, 0.4);
+    /* Green shadow for eco-forward look */
     animation: float 4s ease-in-out infinite;
     /* Add a subtle 3D tilt effect for a dynamic, youthful feel */
     transform: perspective(1000px) rotateY(-5deg) scale(1);
     transition: all 0.5s ease;
 
-    
+
 }
 
 .hero-img img:hover {
@@ -505,9 +532,11 @@ body {
     .hero-info {
         margin: 0 auto 25px;
     }
+
     .hero-title {
         font-size: 2.5rem;
     }
+
     .hero-tagline {
         font-size: 1.1rem;
     }
@@ -539,7 +568,8 @@ body {
     font-family: var(--font-roboto);
     font-size: 0.9rem;
     letter-spacing: 3px;
-    color: var(--color-yellow); /* Energetic Yellow for excitement */
+    color: var(--color-yellow);
+    /* Energetic Yellow for excitement */
     margin-bottom: 5px;
     text-transform: uppercase;
 }
@@ -574,21 +604,23 @@ body {
 
 .models-overview-section {
     /* Keep the overall section background dark for contrast with the cards */
-    background: var(--color-secondary-bg); 
+    background: var(--color-secondary-bg);
     color: var(--color-white);
     padding-bottom: 5rem;
 }
 
 /* Section Titles - remain visible on the dark background */
 .models-overview-section .section-pre-title {
-    color: var(--color-yellow); 
+    color: var(--color-yellow);
 }
 
 /* --- Model Card Styling --- */
 .model-card {
-    background: var(--color-white); /* SWITCHED TO WHITE for a clean, sharp look */
+    background: var(--color-white);
+    /* SWITCHED TO WHITE for a clean, sharp look */
     /* border-radius: 15px; */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on light card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* Stronger shadow on light card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* border: 3px solid var(--color-green);  */
     overflow: hidden;
@@ -599,27 +631,30 @@ body {
 
 .model-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(135, 192, 96, 0.5); /* Stronger Green glow on hover */
+    box-shadow: 0 15px 45px rgba(135, 192, 96, 0.5);
+    /* Stronger Green glow on hover */
 }
 
 /* --- Image Carousel/Slider Styling --- */
 .model-carousel {
     /* background: var(--color-black);  */
-    padding: 15px 15px 10px; 
-    border-bottom: 3px solid var(--color-yellow); 
+    padding: 15px 15px 10px;
+    border-bottom: 3px solid var(--color-yellow);
 }
 
 .model-img {
-    max-height: 300px; 
+    max-height: 300px;
     width: 100%;
     object-fit: cover;
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5)); /* White glow on black BG */
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+    /* White glow on black BG */
 }
 
 /* Carousel controls for visibility on black background */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: brightness(0) invert(1); /* White/Light controls */
+    filter: brightness(0) invert(1);
+    /* White/Light controls */
     opacity: 0.8;
 }
 
@@ -630,14 +665,15 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    color: var(--color-black); /* Ensure text is readable on white BG */
+    color: var(--color-black);
+    /* Ensure text is readable on white BG */
 }
 
 .model-name {
     font-family: var(--font-poppins);
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--color-green); 
+    color: var(--color-green);
     text-transform: uppercase;
     /* margin-bottom: 5px; */
 }
@@ -646,9 +682,10 @@ body {
     display: none;
     font-family: var(--font-roboto);
     font-size: 1rem;
-    color: var(--color-black); /* Dark text on white background */
+    color: var(--color-black);
+    /* Dark text on white background */
     margin-bottom: 25px;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 /* --- WhatsApp Button (Themed) --- */
@@ -658,20 +695,20 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    background: var(--color-yellow); 
+    background: var(--color-yellow);
     color: var(--color-black);
     padding: 12px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-family: var(--font-poppins);
-    font-weight: 700; 
+    font-weight: 700;
     font-size: 1.05rem;
     transition: all 0.3s ease;
     border: 2px solid var(--color-yellow);
 }
 
 .btn-whatsapp:hover {
-    background: var(--color-green); 
+    background: var(--color-green);
     border-color: var(--color-green);
     color: var(--color-white);
     transform: translateY(-2px);
@@ -688,14 +725,17 @@ body {
     .model-name {
         font-size: 1.6rem;
     }
+
     .model-tagline {
         font-size: 0.95rem;
     }
+
     .btn-whatsapp {
         font-size: 0.9rem;
     }
+
     .model-img {
-        max-height: 200px; 
+        max-height: 200px;
     }
 }
 
@@ -733,7 +773,7 @@ body {
 /* ========================================= */
 
 .dealership-section {
-    background: var(--color-light-bg); 
+    background: var(--color-light-bg);
     color: var(--color-black);
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -741,7 +781,8 @@ body {
 
 /* Section Titles (Consistent with Contact Section) */
 .dealership-section .section-pre-title {
-    color: var(--color-yellow); /* Yellow accent for pre-title */
+    color: var(--color-yellow);
+    /* Yellow accent for pre-title */
 }
 
 .dealership-section .section-title {
@@ -757,21 +798,22 @@ body {
     background: var(--color-white);
     padding: 30px 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    height: 100%; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    height: 100%;
     transition: all 0.3s ease;
-    border-bottom: 5px solid transparent; 
+    border-bottom: 5px solid transparent;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-bottom: 5px solid var(--color-yellow); /* Energetic Yellow highlight on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid var(--color-yellow);
+    /* Energetic Yellow highlight on hover */
 }
 
 .benefit-icon {
     font-size: 3rem;
-    color: var(--color-green); 
+    color: var(--color-green);
     margin-bottom: 15px;
     text-shadow: 0 0 8px rgba(135, 192, 96, 0.4);
 }
@@ -798,9 +840,9 @@ body {
 
 .dealership-form-card {
     background: var(--color-white);
-    padding: 40px; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 4rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
 
@@ -809,22 +851,22 @@ body {
     font-weight: 700;
     font-size: 1.8rem;
     margin-bottom: 30px;
-    color: var(--color-black); 
+    color: var(--color-black);
 }
 
 /* Form Input Styling */
 .dealership-form-card .form-control {
-    padding: 12px 15px; 
+    padding: 12px 15px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    background-color: var(--color-light-bg); 
+    background-color: var(--color-light-bg);
     outline: none;
     font-size: 0.9rem;
     transition: all 0.3s;
 }
 
 .dealership-form-card .form-control:focus {
-    border-color: var(--color-green); 
+    border-color: var(--color-green);
     box-shadow: 0 0 0 0.25rem rgba(135, 192, 96, 0.25);
     background-color: var(--color-white);
 }
@@ -843,7 +885,8 @@ body {
 /* Dealership Submit Button */
 .btn-submit-dealership {
     display: inline-block;
-    background: var(--color-green); /* Electric Green for the main CTA */
+    background: var(--color-accent);
+    /* Electric Green for the main CTA */
     color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -857,7 +900,7 @@ body {
 }
 
 .btn-submit-dealership:hover {
-    background: var(--color-yellow); 
+    background: var(--color-yellow);
     color: var(--color-black);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
@@ -866,7 +909,12 @@ body {
 
 
 
-
+@media (max-width: 728px) {
+    .dealership-form-card {
+        background: var(--color-white);
+        padding: 1rem;
+    }
+}
 
 
 
@@ -881,7 +929,7 @@ body {
 
 /* === About Us Section === */
 .about-section {
-    background: var(--color-secondary-bg); 
+    background: var(--color-secondary-bg);
     color: var(--color-white);
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -897,15 +945,16 @@ body {
 }
 
 .about-lead {
-  font-family: var(--font-roboto);
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  line-height: 1.7;
-  margin-bottom: 25px;
+    font-family: var(--font-roboto);
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
+
 .about-lead strong {
-  color: var(--color-yellow);
-  font-weight: 500;
+    color: var(--color-yellow);
+    font-weight: 500;
 }
 
 /* --- Vision/Mission Card Styles (NEW DESIGN) --- */
@@ -914,8 +963,9 @@ body {
     padding: 25px;
     border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    border-top: 5px solid; /* Placeholder for color accent */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid;
+    /* Placeholder for color accent */
 }
 
 /* Vision Card: Use Electric Green accent */
@@ -923,6 +973,7 @@ body {
     /* background: var(--color-black); */
     border-color: var(--color-green);
 }
+
 .mission-card-vision:hover {
     box-shadow: 0 8px 25px rgba(135, 192, 96, 0.4);
 }
@@ -932,6 +983,7 @@ body {
     /* background: var(--color-black); */
     border-color: var(--color-yellow);
 }
+
 .mission-card-mission:hover {
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
 }
@@ -943,9 +995,11 @@ body {
     font-weight: 700;
     margin-bottom: 5px;
 }
+
 .vision-title {
     color: var(--color-green);
 }
+
 .mission-title {
     color: var(--color-yellow);
 }
@@ -963,16 +1017,18 @@ body {
     line-height: 1.6;
     margin: 0;
 }
+
 .vision-text strong,
 .mission-text strong {
-    font-weight: 700; /* Ensure strong is bold */
+    font-weight: 700;
+    /* Ensure strong is bold */
 }
 
 /* --- Image Styling --- */
 .about-img {
-  width: 100%;
+    width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease;
 }
 
@@ -985,6 +1041,7 @@ body {
     .about-img-container {
         text-align: center;
     }
+
     .about-img {
         max-width: 400px;
     }
@@ -1003,22 +1060,28 @@ body {
 
 /* === Contact Section Styles (V3 - Cleaner, Lighter) === */
 .contact-section {
-    background: var(--color-style-guide-bg); /* Soft light background */
+    background: var(--color-style-guide-bg);
+    /* Soft light background */
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-.contact-title { color: var(--color-black); }
-.contact-subtitle { color: var(--color-grey); }
+.contact-title {
+    color: var(--color-black);
+}
+
+.contact-subtitle {
+    color: var(--color-grey);
+}
 
 /* --- Contact Info Card (V3 - Cleaner Dark Card) --- */
 .contact-info-card-v3 {
-    background: var(--color-secondary-bg); 
+    background: var(--color-secondary-bg);
     color: var(--color-white);
     padding: 30px;
     border-radius: 12px;
     height: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-title-v3 {
@@ -1046,8 +1109,8 @@ body {
 
 
 .contact-icon-circle {
-    background: rgba(135, 192, 96, 0.15); 
-    color: var(--color-green); 
+    background: rgba(135, 192, 96, 0.15);
+    color: var(--color-green);
     border-radius: 50%;
     padding: 10px;
     font-size: 1.1rem;
@@ -1083,7 +1146,7 @@ body {
     background: var(--color-white);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
 
@@ -1099,7 +1162,7 @@ select.form-control {
 }
 
 
-.form-control{
+.form-control {
     padding: .75rem 1rem;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -1107,6 +1170,7 @@ select.form-control {
     font-size: .8rem;
     margin-bottom: 1.5rem;
 }
+
 .form-control:focus {
     border-bottom: 2px solid var(--color-accent-dark);
     border-color: var(--color-accent-dark);
@@ -1114,11 +1178,11 @@ select.form-control {
 }
 
 
-.contact-section button{
-  border: none;
-  background-color: var(--color-accent-dark);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+.contact-section button {
+    border: none;
+    background-color: var(--color-accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
 
@@ -1142,7 +1206,7 @@ select.form-control {
 /* === Footer Styles (V3 - Classic Multi-Column) === */
 .main-footer-v3 {
     /* background: var(--color-black);  */
-    background: var(--color-accent-dark); 
+    background: var(--color-accent-dark);
     color: #cccccc;
     font-family: var(--font-roboto);
 }
@@ -1260,97 +1324,96 @@ select.form-control {
 /* ============= Icons ==============  */
 
 .social-float {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  right: 20px;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 24px;
-  z-index: 100;
-  transform: all 0.5s ease;
-  line-height: 46px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 100;
+    transform: all 0.5s ease;
+    line-height: 46px;
 }
 
 .social-float::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  animation: pulse-border 1500ms ease-out infinite;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
 }
 
 .whatsapp-float {
-  background-color: #25d366;
-  bottom: 140px;
+    background-color: #25d366;
+    bottom: 140px;
 }
 
 .whatsapp-float::before {
-  background-color: #25d366;
+    background-color: #25d366;
 }
 
 .instagram-float {
-  background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  bottom: 200px;
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    bottom: 200px;
 }
 
 .instagram-float::before {
-  background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .youtube-float {
-  background-color: #ff0000;
-  bottom: 320px;
+    background-color: #ff0000;
+    bottom: 320px;
 }
 
 .youtube-float::before {
-  background-color: #ff0000;
+    background-color: #ff0000;
 }
 
 .social-icon {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 /* Keyframes for the pulse effect */
 @keyframes pulse-border {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
 
-  100% {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 0;
-  }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .social-float {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    line-height: 38px;
-    right: 10px;
-  }
+    .social-float {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 38px;
+        right: 10px;
+    }
 
-  .social-icon {
-    line-height: 0.8 !important;
-  }
+    .social-icon {
+        line-height: 0.8 !important;
+    }
 
-  .whatsapp-float {
-    bottom: 100px;
-  }
+    .whatsapp-float {
+        bottom: 100px;
+    }
 
-  .instagram-float {
-    bottom: 150px;
-  }
+    .instagram-float {
+        bottom: 150px;
+    }
 }
-
