@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zapio EV - Electrify Every Ride</title>
 
-   <!-- SEO Meta Tags -->
-   <meta name="description" content="Zapio EV by Alphatechrides Pvt. Ltd. is dedicated to providing smart, sustainable electric vehicles in India. Electrify every ride with innovation and style.">
-   <meta name="keywords" content="Zapio EV, electric vehicles, EV India, Alphatechrides, electric scooters, sustainable mobility, smart transportation, EV dealership">
-   <meta name="author" content="Alphatechrides Pvt. Ltd.">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Zapio EV by Alphatechrides Pvt. Ltd. is dedicated to providing smart, sustainable electric vehicles in India. Electrify every ride with innovation and style.">
+    <meta name="keywords"
+        content="Zapio EV, electric vehicles, EV India, Alphatechrides, electric scooters, sustainable mobility, smart transportation, EV dealership">
+    <meta name="author" content="Alphatechrides Pvt. Ltd.">
 
-   <!-- Open Graph / Facebook Meta Tags -->
-   <meta property="og:title" content="Zapio EV - Electrify Every Ride">
-   <meta property="og:description" content="Discover the future of smart and sustainable mobility with Zapio EV. Join India's electric vehicle revolution.">
-   <meta property="og:image" content="https://zapioev.com/assets/images/logo.png"> 
-   <meta property="og:url" content="https://zapioev.com/">
-   <meta property="og:type" content="website">
-   <meta property="og:site_name" content="Zapio EV">
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Zapio EV - Electrify Every Ride">
+    <meta property="og:description"
+        content="Discover the future of smart and sustainable mobility with Zapio EV. Join India's electric vehicle revolution.">
+    <meta property="og:image" content="https://zapioev.com/assets/images/logo.png">
+    <meta property="og:url" content="https://zapioev.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zapio EV">
 
 
-   <!-- Twitter Card (Optional but Recommended) -->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Zapio EV - Electrify Every Ride">
-   <meta name="twitter:description" content="Smart, sustainable electric mobility solutions by Zapio EV.">
-   <meta name="twitter:image" content="https://zapioev.com/assets/images/og-image.jpg"> 
-   <meta name="twitter:site" content="@zapioev"> 
-   <meta name="twitter:creator" content="@zapioev">
+    <!-- Twitter Card (Optional but Recommended) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zapio EV - Electrify Every Ride">
+    <meta name="twitter:description" content="Smart, sustainable electric mobility solutions by Zapio EV.">
+    <meta name="twitter:image" content="https://zapioev.com/assets/images/og-image.jpg">
+    <meta name="twitter:site" content="@zapioev">
+    <meta name="twitter:creator" content="@zapioev">
 
-   <!-- Favicon -->
-   <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
 
 
     <!-- Bootstrap -->
@@ -472,65 +475,78 @@
 
                 <div class="col-lg-10">
                     <div class="dealership-form-card">
-                        <form action="#" method="POST">
+                        <form id="dealership-form" method="POST">
                             <h3 class="card-title-dealership-form">Apply to Become a Dealer</h3>
 
                             <div class="row">
-                                <div class="col-md-6 ">
-                                    <input type="text" class="form-control" placeholder="Business/Company Name"
+                                <div class="col-md-6">
+                                    <input type="text" name="company_name" class="form-control"
+                                        placeholder="Business/Company Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="full_name" class="form-control"
+                                        placeholder="Full Name (Owner/Director)" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number"
                                         required>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <input type="text" class="form-control" placeholder="Full Name (Owner/Director)"
+                                <div class="col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="Email Address"
                                         required>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 ">
-                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                <div class="col-md-6">
+                                    <input type="text" name="city" class="form-control"
+                                        placeholder="City / Region of Interest" required>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" placeholder="Email Address" required>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 ">
-                                    <input type="text" class="form-control" placeholder="City / Region of Interest"
-                                        required>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <input type="text" class="form-control" placeholder="Available Space (Sq. Ft.)"
-                                        required>
+                                <div class="col-md-6">
+                                    <input type="text" name="space" class="form-control"
+                                        placeholder="Available Space (Sq. Ft.)" required>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 ">
-                                    <select class="form-control" required>
+                                <div class="col-md-6">
+                                    <select name="business_status" class="form-control" required>
                                         <option value="">Select Existing Business Status *</option>
-                                        <option value="current_dealer">Currently operate a dealership (Any Brand)
-                                        </option>
-                                        <option value="retail">Retail Business Owner (Non-Automotive)</option>
-                                        <option value="new_venture">New Business Venture</option>
+                                        <option value="Current Dealer">Currently operate a dealership</option>
+                                        <option value="Retail">Retail Business Owner</option>
+                                        <option value="New Venture">New Business Venture</option>
                                     </select>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <select class="form-control" required>
+                                <div class="col-md-6">
+                                    <select name="investment" class="form-control" required>
                                         <option value="">Proposed Investment Range *</option>
-                                        <option value="low">5 Lacs - 10 Lacs</option>
-                                        <option value="medium">10 Lacs - 20 Lacs</option>
-                                        <option value="high">20 Lacs +</option>
+                                        <option value="5-10 Lacs">5 Lacs - 10 Lacs</option>
+                                        <option value="10-20 Lacs">10 Lacs - 20 Lacs</option>
+                                        <option value="20+ Lacs">20 Lacs +</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="mb-1">
-                                <textarea class="form-control" rows="3"
-                                    placeholder="Tell us briefly about your business background and why you want to partner with Zapio EV."
-                                    required></textarea>
+                                <textarea name="background" class="form-control" rows="3"
+                                    placeholder="Business background and intent" required></textarea>
                             </div>
+
+                            <div class="loading d-none text-center my-3">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <div>Sending...</div>
+                            </div>
+
+                            <div class="alert alert-danger text-center error-message text-center d-none" role="alert">
+                            </div>
+                            <div class="alert alert-success sent-message text-center  d-none" role="alert">
+                                Your message has been sent. Thank you!
+                            </div>
+
+
                             <button type="submit" class="btn-submit-dealership shine-btn w-100">Submit Dealership
                                 Application</button>
                         </form>
@@ -640,28 +656,44 @@
 
                 <div class="col-lg-7">
                     <div class="contact-form-card-v3">
-                        <form action="#" method="POST">
+                        <form id="contact-form" method="POST">
                             <h3 class="card-title-v3">Send a Message</h3>
+
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Full Name" required>
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email Address" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email Address"
+                                    required>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
                             </div>
                             <div class="mb-3">
-                                <select class="form-control" required>
+                                <select name="subject" class="form-control" required>
                                     <option value="">Select Inquiry Type</option>
-                                    <option value="sales">Product Inquiry</option>
-                                    <option value="dealership">Dealership Application</option>
-                                    <option value="support">Technical Support</option>
+                                    <option value="Product Inquiry">Product Inquiry</option>
+                                    <option value="Dealership Application">Dealership Application</option>
+                                    <option value="Technical Support">Technical Support</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                                <textarea name="message" class="form-control" rows="3" placeholder="Your Message"
+                                    required></textarea>
                             </div>
+
+                            <div class="loading d-none text-center my-3">
+                                <div class="spinner-border text-primary" role="status"></div>
+                                <div>Sending...</div>
+                            </div>
+
+                            <div class="alert alert-danger error-message  text-center d-none" role="alert"></div>
+                            <div class="alert alert-success sent-message  text-center d-none" role="alert">
+                                Your message has been sent. Thank you!
+                            </div>
+
+
+
                             <button type="submit" class="btn-primary shine-btn w-100">Submit Inquiry</button>
                         </form>
                     </div>
@@ -685,8 +717,10 @@
                         to smart and sustainable electric mobility in India.
                     </p>
                     <div class="social-icons-v3 mt-3">
-                        <a  target="_blank" href="https://www.facebook.com/share/17HffjjaQR/?mibextid=wwXIfr" class="social-icon-footer-v3"><i class="fab fa-facebook-f"></i></a>
-                        <a  target="_blank" href="https://www.instagram.com/zapioev" class="social-icon-footer-v3"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/share/17HffjjaQR/?mibextid=wwXIfr"
+                            class="social-icon-footer-v3"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/zapioev" class="social-icon-footer-v3"><i
+                                class="fab fa-instagram"></i></a>
                         <!-- <a href="" class="social-icon-footer-v3"><i class="fab fa-youtube"></i></a> -->
                         <a href="https://api.whatsapp.com/send?phone=919053271001" target="_blank"
                             class="social-icon-footer-v3">
