@@ -727,16 +727,21 @@ body {
 
 
 
-/* === Dealership Section === */
+
+/* ========================================= */
+/* === Dealership Section STYLES (Clean & Professional) === */
+/* ========================================= */
+
 .dealership-section {
-    background: var(--color-style-guide-bg); /* Use a soft light background (or white) for contrast */
+    background: var(--color-light-bg); 
     color: var(--color-black);
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
+/* Section Titles (Consistent with Contact Section) */
 .dealership-section .section-pre-title {
-    color: var(--color-green); /* Electric Green for confidence and growth */
+    color: var(--color-yellow); /* Yellow accent for pre-title */
 }
 
 .dealership-section .section-title {
@@ -744,7 +749,7 @@ body {
 }
 
 .dealership-section .section-subtitle {
-    color: var(--color-grey);
+    color: var(--color-grey-text);
 }
 
 /* === Benefit Cards === */
@@ -753,9 +758,9 @@ body {
     padding: 30px 20px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    height: 100%; /* Ensures cards in a row are the same height */
+    height: 100%; 
     transition: all 0.3s ease;
-    border-bottom: 5px solid var(--color-white); /* Space for hover effect */
+    border-bottom: 5px solid transparent; 
 }
 
 .benefit-card:hover {
@@ -766,9 +771,8 @@ body {
 
 .benefit-icon {
     font-size: 3rem;
-    color: var(--color-green); /* Primary brand color */
+    color: var(--color-green); 
     margin-bottom: 15px;
-    /* Subtle green text-shadow for an electric feel */
     text-shadow: 0 0 8px rgba(135, 192, 96, 0.4);
 }
 
@@ -782,23 +786,82 @@ body {
 
 .benefit-description {
     font-family: var(--font-roboto);
-    color: var(--color-grey);
+    color: var(--color-grey-text);
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* === Large CTA Button (for Dealership Application) === */
-.btn-cta-large {
-    font-size: 1.1rem;
-    padding: 15px 40px;
+
+/* ================================================== */
+/* === DEALERSHIP APPLICATION FORM STYLES (Clean White Card) === */
+/* ================================================== */
+
+.dealership-form-card {
+    background: var(--color-white);
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 100%;
 }
 
+.card-title-dealership-form {
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--color-black); 
+}
 
+/* Form Input Styling */
+.dealership-form-card .form-control {
+    padding: 12px 15px; 
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--color-light-bg); 
+    outline: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
 
+.dealership-form-card .form-control:focus {
+    border-color: var(--color-green); 
+    box-shadow: 0 0 0 0.25rem rgba(135, 192, 96, 0.25);
+    background-color: var(--color-white);
+}
 
+/* Select Dropdown Arrow */
+.dealership-form-card select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2387c060' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 14px;
+}
 
+/* Dealership Submit Button */
+.btn-submit-dealership {
+    display: inline-block;
+    background: var(--color-green); /* Electric Green for the main CTA */
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
 
-
+.btn-submit-dealership:hover {
+    background: var(--color-yellow); 
+    color: var(--color-black);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
 
 
 
