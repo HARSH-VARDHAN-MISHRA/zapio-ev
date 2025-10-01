@@ -132,6 +132,53 @@ body {
 
 
 
+/* Mobile Fixed Bottom Buttons */
+.mobile-fixed-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+}
+
+/* Common styles for both buttons */
+.mobile-fixed-buttons .mobile-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated button colors using theme variables */
+.call-btn {
+    background-color: var(--color-yellow); /* Bright yellow */
+    color: var(--color-black); /* Better contrast on yellow */
+}
+
+.whatsapp-btn {
+    background-color: var(--color-green); /* Deep green/black tone */
+    color: var(--color-white);
+}
+
+/* Add margin-bottom to footer when on mobile */
+@media (max-width: 767.98px) {
+    footer {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
 
 /* ========================================= */
 /* === HEADER V5 - CUSTOM & ORGANIZED CSS === */
@@ -1411,6 +1458,7 @@ select.form-control {
 
     .whatsapp-float {
         bottom: 100px;
+        display: none;
     }
 
     .instagram-float {
