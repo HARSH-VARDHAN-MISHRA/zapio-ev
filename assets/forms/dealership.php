@@ -1,5 +1,5 @@
 <?php
-$receiving_email_address = 'webrdevo@gmail.com';
+$receiving_email_address = 'alphatechrides@gmail.com';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $company_name = strip_tags(trim($_POST["company_name"]));
@@ -49,3 +49,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   http_response_code(403);
   echo "Invalid request.";
 }
+
